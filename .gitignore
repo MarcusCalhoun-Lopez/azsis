@@ -1,0 +1,24 @@
+# Ignore generated favicon files.
+# See https://en.wikipedia.org/wiki/Favicon
+/www/android-chrome-192x192.png
+/www/android-chrome-512x512.png
+/www/apple-touch-icon.png
+/www/favicon-16x16.png
+/www/favicon-32x32.png
+/www/favicon.gif
+/www/favicon.ico
+
+# Do not store secret files.
+/credentials/
+
+# Do not store external libraries.
+/vendor/
+/bin/composer
+/www/common/js/jquery*.js
+
+# Sensitive data can be stored in the web server file via `SetEnv`.
+# Ignore the root .htaccess file.
+/www/.htaccess
+
+# Ignore DreamHost diagnostic directory.
+/www/.dh-diag
