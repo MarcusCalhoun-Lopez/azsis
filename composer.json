@@ -1,0 +1,20 @@
+{
+    "name": "marcuscalhoun-lopez/azsis",
+    "description": "Student Information System",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.5",
+        "giggsey/libphonenumber-for-php": "^9.0",
+        "google/apiclient": "^2.19"
+    },
+    "autoload": {
+        "psr-4": {
+            "AzSIS\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
