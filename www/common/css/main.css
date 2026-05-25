@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+h1 {
+    text-align:center;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/*  Navigation Bar */
+/* ------------------------------------------------------------------------------------ */
+nav ul li img {
+    width:2em;
+    height:2em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li.right {
+    float: right;
+}
+
+nav ul li a, nav ul li span, nav ul li form button {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li form button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+nav ul li a.photo {
+  padding: 7px 16px;
+  vertical-align: middle;
+}
+
+nav ul li a.photo img {
+  border-radius: 50%;
+}
+
+nav ul li a:hover:not(.active), nav ul li span:hover:not(.active), nav ul li form button:hover:not(.active) {
+  background-color: #111;
+}
+
+nav ul li ul li:first-child {
+    display: none;
+}
+
+nav ul li form {
+    display: inline;
+}
+
+/* On small screens, display icons instead of links. */
+/* Invisible links go down when icon is clicked. */
+@media all and (max-width: 700px) {
+    nav ul li ul li:first-child {
+        display: initial;
+    }
+
+    nav ul li ul li:not(:first-child) {
+        display: none;
+    }
+
+    nav ul li ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* When printing page, to not include navigation bar. */
+@media print {
+    nav, nav * {
+        display: none !important;
+    }
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Tables */
+/* ------------------------------------------------------------------------------------ */
+table,
+table thead tr th,
+table thead tr td,
+table tbody tr th,
+table tbody tr td {
+    border: 1px solid gray;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table tbody tr td input,
+table tbody tr td {
+    text-align:center;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Inactive Students */
+/* ------------------------------------------------------------------------------------ */
+[data-student-is-active='0'],
+[data-student-is-active='0'] th,
+[data-student-is-active='0'] td,
+[data-student-is-active='0'] td input {
+    text-decoration: line-through;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Incentive Charts */
+/* ------------------------------------------------------------------------------------ */
+table.incentive_chart tbody tr td {
+    min-width:2.5em;
+}
+
+table.incentive_chart tbody th {
+    text-align:right;
+    min-width:10em;
+}
+
+div.long_table {
+    overflow-x:scroll;
+    margin-left:10.1em;
+    overflow-y:scroll;
+}
+
+table.incentive_chart tbody tr th:first-child,
+table.incentive_chart thead tr th:first-child {
+    position:absolute;
+    width:10em;
+    left:0.25em;
+}
+
+table.incentive_chart thead tr th,
+table.incentive_chart thead tr td,
+table.incentive_chart tbody tr th,
+table.incentive_chart tbody tr td {
+    height:1.45em;
+}
+
+table.incentive_chart tbody tr td input:nth-child(1n+2) {
+    display: none;
+}
+
+table.incentive_chart thead tr th:nth-child(n+2):nth-child(-n+3),
+table.incentive_chart tbody tr td:nth-child(n+2):nth-child(-n+3) {
+    display: none;
+}
